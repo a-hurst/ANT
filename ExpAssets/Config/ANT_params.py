@@ -22,8 +22,9 @@ labjacking = False
 #########################################
 default_fill_color = (255, 255, 255, 255)
 default_color = (0, 0, 0, 255)
-default_font_size = 28
-default_font_name = 'Frutiger'
+default_font_size = 0.5
+default_font_unit = 'deg'
+default_font_name = 'Roboto-Medium'
 
 #########################################
 # EyeLink Settings
@@ -39,15 +40,15 @@ saccadic_motion_threshold = 0.15
 # Experiment Structure
 #########################################
 multi_session_project = False
-trials_per_block = 0
-blocks_per_experiment = 1
+trials_per_block = 96
+blocks_per_experiment = 3
 table_defaults = {} 
 
 #########################################
 # Development Mode Settings
 #########################################
 dm_auto_threshold = True
-dm_trial_show_mouse = True
+dm_trial_show_mouse = False
 dm_ignore_local_overrides = False
 dm_show_gaze_dot = True
 

@@ -1,16 +1,21 @@
-__author__ = "Austin Hurst"
 from klibs.KLIndependentVariable import IndependentVariableSet
+
+
+# Initialize object containing project's independent variables
 
 ANT_ind_vars = IndependentVariableSet()
 
-ANT_ind_vars.add_variable("cue_type", str)
-ANT_ind_vars["cue_type"].add_values("none", "central", "double", "spatial")
 
-ANT_ind_vars.add_variable("cue_location", str)
-ANT_ind_vars["cue_location"].add_values("above", "below")
+# Define project variables and variable types
 
-ANT_ind_vars.add_variable("target_direction", str)
-ANT_ind_vars["target_direction"].add_values("left", "right")
 
-ANT_ind_vars.add_variable("flanker_type", str)
-ANT_ind_vars["flanker_type"].add_values("congruent", "neutral", "incongruent")
+## Factors ##
+# 'cue_type': the type of cue ("spatial" == same location as 'target_location')
+# 'target_location': the location of the target and flanker arrows
+# 'target_direction': the direction of the target arrow
+# 'flanker_type': the type of flanker arrow (same direction, opposite direction, or plain line)
+
+ANT_ind_vars.add_variable("cue_type", str, ["central", "double", "spatial"])
+ANT_ind_vars.add_variable("target_location", str, ["above", "below"])
+ANT_ind_vars.add_variable("target_direction", str, ["left", "right"])
+ANT_ind_vars.add_variable("flanker_type", str, ["congruent", "neutral", "incongruent"])
