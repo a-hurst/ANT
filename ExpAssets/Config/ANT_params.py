@@ -3,7 +3,7 @@
 #########################################
 # Runtime Settings
 #########################################
-collect_demographics = False
+collect_demographics = True
 manual_demographics_collection = False
 manual_trial_generation = False
 multi_user = False
@@ -57,8 +57,8 @@ dm_show_gaze_dot = True
 #########################################
 primary_table = "trials"
 unique_identifier = "userhash"
-default_participant_fields = [[unique_identifier, "participant"], "sex", "age", "handedness"]
-default_participant_fields_sf = [[unique_identifier, "participant"], "random_seed", "sex", "age", "handedness"]
+exclude_data_cols = ["created"]
+append_info_cols = ["random_seed"]
 
 #########################################
 # PROJECT-SPECIFIC VARS
